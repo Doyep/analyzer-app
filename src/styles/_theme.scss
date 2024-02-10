@@ -1,0 +1,9 @@
+:root {
+  --blue-100: #00a8e8; // not used yet
+  --blue-200: #007ea7;
+  --blue-300: #003459;
+
+  --primary: var(--blue-300, blue);
+  --secondary: var(--blue-200, blue);
+  --strava: #ff4d00;
+}

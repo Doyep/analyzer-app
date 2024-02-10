@@ -1,0 +1,40 @@
+:host {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100svh;
+  background: linear-gradient(to right, var(--secondary, blue), var(--primary, blue));
+}
+
+main {
+  width: 22rem;
+  margin: auto;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  background-color: white;
+}
+
+hgroup {
+  margin-bottom: 1.25rem;
+}
+
+h1 {
+  font-family: 'azonix';
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  color: var(--secondary, blue);
+
+  &::first-letter {
+    color: var(--primary, blue);
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
+p {
+  text-align: center;
+  color: var(--primary, blue);
+}
+
+.align-right {
+  text-align: right;
+}
