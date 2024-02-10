@@ -1,0 +1,13 @@
+:host {
+  @apply h-screen flex items-stretch;
+  @apply flex-col;
+}
+
+main {
+  @apply grow;
+  @apply overflow-auto;
+}
+
+@screen sm {
+  :host { @apply flex-row }
+}

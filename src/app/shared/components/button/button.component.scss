@@ -1,0 +1,25 @@
+:host {
+  @apply cursor-pointer select-none touch-manipulation border-0 rounded-lg shadow-none;
+}
+
+a {
+  @apply grid py-3 px-3.5 text-center;
+  grid: 'container';
+}
+
+a > * {
+  grid-area: container;
+}
+
+img {
+  @apply h-4 items-center justify-start;
+}
+
+:host.strava {
+  @apply bg-black text-white hover:text-strava;
+}
+
+:host.primary {
+  @apply text-white bg-gradient-to-t from-primary to-secondary;
+  @apply hover:bg-gradient-to-b hover:from-primary hover:to-secondary;
+}

@@ -1,0 +1,22 @@
+header {
+  @apply bg-primary flex gap-4;
+  @apply h-[4rem] sticky top-0 py-2 pr-4 justify-between items-center;
+}
+
+h1 {
+  @apply text-white overflow-hidden whitespace-nowrap text-ellipsis;
+  @apply text-xl;
+}
+
+app-sidenav-items {
+  @apply h-[calc(100%-4rem)] w-screen fixed -left-full bg-white opacity-0 overflow-auto transition-all duration-500;
+}
+
+.open { @apply left-0 opacity-100 }
+
+@screen sm {
+  :host { @apply shadow-sidenav }
+  header { @apply h-[5rem] w-[15rem] static px-4 py-4 flex-row-reverse justify-end }
+  h1 { @apply text-base }
+  app-sidenav-items { @apply h-[calc(100%-5rem)] w-[inherit] static left-0 bg-primary opacity-100 overflow-visible transition-none }
+}

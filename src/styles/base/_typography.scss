@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'futura';
+  src: url(/assets/fonts/book/FuturaPT-Book.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'azonix';
+  src: url(/assets/fonts/azonix/Azonix.otf) format('opentype');
+}
+
+* {
+  font-family: 'futura';
+}

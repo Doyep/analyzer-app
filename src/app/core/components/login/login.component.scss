@@ -1,0 +1,12 @@
+:host {
+  @apply min-h-screen flex items-center justify-center;
+  @apply sm:bg-gradient-to-l sm:from-primary sm:to-secondary;
+}
+
+h1 {
+  @apply font-title text-secondary text-4xl first-letter:text-6xl first-letter:text-primary;
+}
+
+p {
+  @apply text-primary text-center;
+}

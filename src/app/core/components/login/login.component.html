@@ -1,0 +1,21 @@
+@if (isLoggingIn) {
+} @else {
+  <main class="min-w-[22rem] p-10 sm:border sm:border-primary rounded-2xl bg-white">
+    <h1 class="text-left">Doyep</h1>
+    <h1 class="text-right mb-5">Analyzer</h1>
+
+    <p class="mb-1">Welcome !</p>
+    <p class="mb-5">Website is still under construction.</p>
+
+    <nav class="flex flex-col gap-4">
+      <app-button
+        label="Login with Strava"
+        [url]="stravaUrl"
+        icon="/assets/icon-strava.svg"
+        alt="strava icon"
+        theme="strava"
+      ></app-button>
+      <app-button label="Demonstration" theme="primary"></app-button>
+    </nav>
+  </main>
+}
