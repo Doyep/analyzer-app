@@ -13,14 +13,3 @@ export function stravaAuthorizeUrl(): string {
   }).toString();
   return `${url}?${params}`;
 }
-// TODO - can be improved
-// private login$ = this.activatedRoute.queryParams.pipe(
-//   filter(params => params['code']),
-//   tap(() => (this.isLoggingIn = true)),
-//   switchMap(params => this.authService.login(params['code'])),
-//   tap(() => this.router.navigateByUrl('/')),
-//   catchError(() => {
-//     this.isLoggingIn = false;
-//     return EMPTY;
-//   })
-// );
