@@ -1,0 +1,36 @@
+a[theme="button"] {
+  --_background-color: var(--background-color, gray);
+  --_background-color-hover: var(--background-color-hover, var(--_background-color));
+  --_text-color: var(--text-color, white);
+  --_text-color-hover: var(--text-color-hover, var(--_text-color));
+
+  display: grid;
+  grid: 'container';
+  padding: 0.75rem 0.875rem;
+  border-radius: 0.5rem;
+  background: var(--_background-color);
+  text-align: center;
+  color: var(--_text-color);
+
+  & > * {
+    grid-area: container;
+    height: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &:hover {
+    background: var(--_background-color-hover);
+    color: var(--_text-color-hover);
+  }
+}
+
+a.primary {
+  --background-color: linear-gradient(to top, var(--primary, blue), var(--secondary, blue));
+  --background-color-hover: linear-gradient(to bottom, var(--primary, blue), var(--secondary, blue));
+}
+
+a.strava {
+  --background-color: black;
+  --text-color-hover: var(--strava, orange);
+}

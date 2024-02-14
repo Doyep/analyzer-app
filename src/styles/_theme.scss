@@ -1,0 +1,33 @@
+:root {
+  --blue-100: #00a8e8; // not used yet
+  --blue-200: #007ea7;
+  --blue-300: #003459;
+
+  --primary: var(--blue-300, blue);
+  --secondary: var(--blue-200, blue);
+  --strava: #ff4d00;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.red {
+  color: red;
+}
+
+.primary {
+  color: var(--primary, blue)
+}
+
+.text-center {
+  text-align: center;
+}
+
+.margin-auto {
+  margin: auto;
+}

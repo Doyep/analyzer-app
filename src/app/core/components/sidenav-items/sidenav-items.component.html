@@ -1,17 +1,11 @@
 @for (menuItem of menuItems; track $index) {
-  <a
-    class="group"
-    [routerLink]="menuItem.link"
-    routerLinkActive="active"
-    [routerLinkActiveOptions]="{exact: menuItem.exact ?? false}"
-  >
-    <app-svg-icon
-      class="group-hover:text-strava"
-      [type]="menuItem.icon"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{exact: menuItem.exact ?? false}"
-    ></app-svg-icon>
-    {{ menuItem.title }}
-  </a>
+<a class="group" [routerLink]="menuItem.link" routerLinkActive="active"
+  [routerLinkActiveOptions]="{exact: menuItem.exact ?? false}">
+  <app-svg-icon class="group-hover:text-strava" [type]="menuItem.icon" routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact: menuItem.exact ?? false}"></app-svg-icon>
+  {{ menuItem.title }}
+</a>
 }
-<a class="group" (click)="onLogout()"><app-svg-icon class="group-hover:text-strava" type="exit"></app-svg-icon>Logout</a>
+// eslint-disable-next-line @angular-eslint/template/interactive-supports-focus
+<a class="group" (click)="onLogout()"><app-svg-icon class="group-hover:text-strava"
+    type="exit"></app-svg-icon>Logout</a>
