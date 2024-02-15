@@ -2,7 +2,8 @@
   display: flex;
   min-height: 100vh;
   min-height: 100svh;
-  background: linear-gradient(to right, var(--secondary, blue), var(--primary, blue));
+  padding: 2.5rem;
+  background: white;
 }
 
 main {
@@ -29,6 +30,12 @@ h1::first-letter {
   line-height: 1;
 }
 
-.h-7\.5 {
-  height: 7.5rem;
+.h-8 {
+  height: 8rem;
+}
+
+@media (min-width: 481px) {
+  :host {
+    background: linear-gradient(to right, var(--secondary, blue), var(--primary, blue));
+  }
 }

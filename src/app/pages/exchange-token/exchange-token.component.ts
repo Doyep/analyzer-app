@@ -27,7 +27,7 @@ export class ExchangeTokenComponent implements OnInit {
   ngOnInit(): void {
     const stravaParam: stravaExchangeToken = this.activatedRoute.snapshot.queryParams;
     if (stravaParam.error) return this.redirectWithError('Access denied.')
-    if (!stravaParam.code) return
+    if (!stravaParam.code) return this.redirectWithError('Internal Error.')
 
     this.loginSrv.login(stravaParam.code).subscribe({
       next: () => this.router.navigateByUrl('/'),
