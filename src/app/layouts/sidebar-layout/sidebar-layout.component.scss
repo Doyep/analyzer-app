@@ -1,0 +1,18 @@
+:host {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+@media (min-width: 480px) {
+  :host {
+    display: flex;
+    align-items: stretch;
+    height: 100vh;
+    height: 100svh;
+  }
+
+  main {
+    flex-grow: 1;
+    overflow: auto;
+  }
+}

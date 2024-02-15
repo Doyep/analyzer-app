@@ -5,9 +5,9 @@ import { DashboardComponent } from 'src/app/components/dashboard/dashboard.compo
 import { ProfileComponent } from 'src/app/components/profile/profile.component';
 import { SettingsComponent } from 'src/app/components/settings/settings.component';
 import { StatisticsComponent } from 'src/app/components/statistics/statistics.component';
+import { SidebarLayoutComponent } from 'src/app/layouts/sidebar-layout/sidebar-layout.component';
 import { ExchangeTokenComponent } from 'src/app/pages/exchange-token/exchange-token.component';
 import { LoginComponent } from '../../pages/login/login.component';
-import { LayoutComponent } from '../components/layout/layout.component';
 import { authGuard } from '../guards/auth-guard';
 
 const mainLayoutChildren: Routes = [
@@ -22,7 +22,7 @@ const mainLayoutChildren: Routes = [
 export const routes: Routes = [
   {
     path: '',
-    component: LayoutComponent,
+    component: SidebarLayoutComponent,
     canActivate: [authGuard],
     children: mainLayoutChildren,
   },
