@@ -14,6 +14,7 @@ export class RefreshTokenService {
   public get(token: Token): Observable<Token> {
     const refreshTokenUrl = import.meta.env.NG_APP_API_URL + '/auth/refresh';
     const body = { refreshToken: token.refreshToken };
+
     return this.httpClient.post<Token>(refreshTokenUrl, body).pipe(
       tap(token => this._newAccessToken$.next(token.accessToken)));
   }

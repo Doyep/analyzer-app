@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { LoginService } from 'src/app/core/services/login.service';
+import { LoginService } from 'src/app/services/login.service';
 
 interface stravaExchangeToken {
   code?: string,

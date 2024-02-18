@@ -1,21 +1,21 @@
-import { Component, WritableSignal, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BurgerMenuComponent, MenuState } from "../burger-menu/burger-menu.component";
+import { Component, WritableSignal, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { NavigationEnd, NavigationStart, Router, RouterModule } from '@angular/router';
-import { LogoutService } from '../../services/logout.service';
-import { UserService } from '../../services/user.service';
 import { Subject, filter, map, tap } from 'rxjs';
-import { SvgIconComponent } from "../../../shared/components/svg-icon/svg-icon.component";
 import { MENU_ITEMS } from 'src/app/models/menu-item.model';
+import { LogoutService } from '../../../services/logout.service';
+import { UserService } from '../../../services/user.service';
+import { SvgIconComponent } from "../../../shared/components/svg-icon/svg-icon.component";
+import { BurgerMenuComponent, MenuState } from "../burger-menu/burger-menu.component";
 import { SidenavItemsComponent } from "../sidenav-items/sidenav-items.component";
 
 @Component({
-    selector: 'app-sidenav',
-    standalone: true,
-    templateUrl: './sidenav.component.html',
-    styleUrls: ['./sidenav.component.scss'],
-    imports: [CommonModule, BurgerMenuComponent, RouterModule, SvgIconComponent, SidenavItemsComponent]
+  selector: 'app-sidenav',
+  standalone: true,
+  templateUrl: './sidenav.component.html',
+  styleUrls: ['./sidenav.component.scss'],
+  imports: [CommonModule, BurgerMenuComponent, RouterModule, SvgIconComponent, SidenavItemsComponent]
 })
 export class SidenavComponent {
   private _menuState$ = new Subject<MenuState>();
