@@ -7,11 +7,11 @@
   display: flex;
   min-height: 100vh;
   min-height: 100svh;
+  padding: 2.5rem;
   background: linear-gradient(to right, var(--secondary, blue), var(--primary, blue));
 }
 
 h1 {
-  margin: auto;
   font-size: var(--text-size);
   color: var(--text-color);
   text-transform: uppercase;

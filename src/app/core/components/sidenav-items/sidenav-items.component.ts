@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { MENU_ITEMS } from 'src/app/models/menu-item.model';
 import { Router, RouterModule } from '@angular/router';
-import { LogoutService } from '../../services/logout.service';
+import { MENU_ITEMS } from 'src/app/models/menu-item.model';
 import { SvgIconComponent } from 'src/app/shared/components/svg-icon/svg-icon.component';
+import { LogoutService } from '../../../services/logout.service';
 
 @Component({
   selector: 'app-sidenav-items',
@@ -17,7 +17,7 @@ export class SidenavItemsComponent {
   constructor(
     private logoutService: LogoutService,
     private router: Router,
-  ) {}
+  ) { }
 
   public onLogout(): void {
     this.logoutService.logout();
