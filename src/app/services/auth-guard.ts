@@ -10,16 +10,21 @@ import { TokenService } from 'src/app/services/token.service';
 import { UserService } from './user.service';
 
 export const authGuard: CanActivateFn = (route: ActivatedRouteSnapshot) => {
-  const token = inject(TokenService).get()
-  if (!token) return logoutAndRedirect(route)
+  const logoutSrv = inject(LogoutService)
+  const loginURLTree = createUrlTreeFromSnapshot(route, ['/login'])
+
+  const tokenSrv = inject(TokenService)
+  if (!tokenSrv.get()) {
+    logoutSrv.logout()
+    return loginURLTree
+  }
 
   return inject(UserService).authUser$.pipe(
     map(() => true),
-    catchError(() => of(logoutAndRedirect(route)))
+    catchError(() => {
+      logoutSrv.logout()
+      return of(loginURLTree)
+    })
   )
-};
-
-const logoutAndRedirect = (route: ActivatedRouteSnapshot) => {
-  inject(LogoutService).logout()
-  return createUrlTreeFromSnapshot(route, ['/login'])
 }
+
