@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { LoginService } from 'src/app/services/login.service';
+import { Component, OnInit } from '@angular/core'
+import { ActivatedRoute, Router } from '@angular/router'
+import { LoginService } from 'src/app/services/login.service'
 
 interface stravaExchangeToken {
   code?: string,
@@ -25,7 +25,7 @@ export class ExchangeTokenComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    const stravaParam: stravaExchangeToken = this.activatedRoute.snapshot.queryParams;
+    const stravaParam: stravaExchangeToken = this.activatedRoute.snapshot.queryParams
     if (stravaParam.error) return this.redirectWithError('Access denied.')
     if (!stravaParam.code) return this.redirectWithError('Internal Error.')
 

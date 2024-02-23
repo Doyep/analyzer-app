@@ -1,4 +1,4 @@
-import { SvgType } from "../shared/components/svg-icon/svg-icon.component";
+import { SvgType } from "../shared/components/svg-icon/svg-icon.component"
 
 export type NavLink = {
   icon: SvgType,
@@ -40,5 +40,5 @@ export const NAV_LINK: Array<NavLink> = [
 ]
 
 export const getNavLink = (route: string) => {
-  return NAV_LINK.find(link => link.url === route);
+  return NAV_LINK.find(link => link.url === route)
 }

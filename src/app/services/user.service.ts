@@ -1,10 +1,10 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-import { shareReplay, switchMap, takeUntil } from 'rxjs/operators';
-import { User } from 'src/app/models/user.model';
-import { environment } from 'src/environment/environment';
-import { LogoutService } from './logout.service';
+import { HttpClient } from '@angular/common/http'
+import { Injectable } from '@angular/core'
+import { BehaviorSubject } from 'rxjs'
+import { shareReplay, switchMap, takeUntil } from 'rxjs/operators'
+import { User } from 'src/app/models/user.model'
+import { environment } from 'src/environment/environment'
+import { LogoutService } from './logout.service'
 
 @Injectable({ providedIn: 'root' })
 export class UserService {

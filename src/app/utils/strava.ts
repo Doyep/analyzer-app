@@ -1,4 +1,4 @@
-import { HttpParams } from "@angular/common/http";
+import { HttpParams } from "@angular/common/http"
 
 export function stravaAuthorizeUrl(): string {
   const url = import.meta.env.NG_APP_STRAVA_AUTHORIZE_URL
@@ -10,6 +10,6 @@ export function stravaAuthorizeUrl(): string {
       approval_prompt: 'force',
       scope: 'read_all,profile:read_all,activity:read_all',
     },
-  }).toString();
-  return `${url}?${params}`;
+  }).toString()
+  return `${url}?${params}`
 }
