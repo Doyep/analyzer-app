@@ -7,11 +7,12 @@ import { ExchangeTokenComponent } from 'src/app/pages/exchange-token/exchange-to
 import { ProfileComponent } from 'src/app/pages/profile/profile.component';
 import { SettingsComponent } from 'src/app/pages/settings/settings.component';
 import { StatisticsComponent } from 'src/app/pages/statistics/statistics.component';
-import { LoginComponent } from '../../pages/login/login.component';
-import { authGuard } from '../../services/auth-guard';
+import { LoginComponent } from './pages/login/login.component';
+import { authGuard } from './services/auth-guard';
 
 const mainLayoutChildren: Routes = [
-  { path: '', component: DashboardComponent, title: 'Dashboard' },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent, title: 'Dashboard' },
   { path: 'activities', component: ActivitiesComponent, title: 'Activities' },
   { path: 'statistics', component: StatisticsComponent, title: 'Statistics' },
   { path: 'profile', component: ProfileComponent, title: 'Profile' },
