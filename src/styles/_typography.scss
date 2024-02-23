@@ -12,3 +12,14 @@
   font-family: 'futura';
   line-height: 1.25;
 }
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-xl-mobile {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}

@@ -1,0 +1,18 @@
+<nav>
+  <ul>
+    @for (link of menuLinks; track $index) {
+    <li>
+      <a class="link text-xl-mobile border-bottom-mobile" [routerLink]="link.url" routerLinkActive="active">
+        <app-svg-icon [type]="link.icon" />
+        {{ link.title }}
+      </a>
+    </li>
+    }
+    <li>
+      <button class="link text-xl-mobile border-bottom-mobile" (click)="onLogout()">
+        <app-svg-icon type="exit" />
+        Logout
+      </button>
+    </li>
+  </ul>
+</nav>

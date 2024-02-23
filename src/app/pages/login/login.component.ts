@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { stravaAuthorizeUrl } from 'src/app/core/utils/strava';
+import { stravaAuthorizeUrl } from 'src/app/utils/strava';
 
 @Component({
   selector: 'app-login',

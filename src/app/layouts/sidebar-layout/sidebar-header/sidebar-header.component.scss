@@ -1,0 +1,35 @@
+:host {
+  --_font-size: var(--font-size);
+  --_padding: var(--padding);
+
+  --font-size: 1.25rem;
+  --padding: 1rem 0.5rem 1rem 0;
+}
+
+header {
+  background-color: var(--primary, blue);
+}
+
+h1 {
+  font-size: var(--_font-size);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: var(--_padding);
+}
+
+@media (min-width: 480px) {
+  :host {
+    --padding: 1rem;
+    --font-size: initial;
+  }
+
+  .mobile-reverse {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+}

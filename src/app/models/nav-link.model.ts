@@ -1,46 +1,44 @@
 import { SvgType } from "../shared/components/svg-icon/svg-icon.component";
 
-export type MenuItem = {
+export type NavLink = {
   icon: SvgType,
+  url: string,
   title: string,
-  link: string,
-  exact?: boolean,
 }
 
-export const MENU_ITEMS: Array<MenuItem> = [
+export const NAV_LINK: Array<NavLink> = [
   {
     icon: 'dashboard',
+    url: '/dashboard',
     title: 'Dasboard',
-    link: '/',
-    exact: true,
   },
   {
     icon: 'list',
+    url: '/activities',
     title: 'Activities',
-    link: '/activities',
   },
   {
     icon: 'graph',
+    url: '/statistics',
     title: 'Statistics',
-    link: '/statistics',
   },
   {
     icon: 'runner',
+    url: '/profile',
     title: 'Profile',
-    link: '/profile',
   },
   {
     icon: 'settings',
+    url: '/settings',
     title: 'Settings',
-    link: '/settings',
   },
   {
     icon: 'admin',
+    url: '/admin',
     title: 'Admin',
-    link: '/admin',
   },
 ]
 
-export const getMenuItem = (route: string) => {
-  return MENU_ITEMS.find(menuItem => menuItem.link === route);
+export const getNavLink = (route: string) => {
+  return NAV_LINK.find(link => link.url === route);
 }

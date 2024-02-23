@@ -1,3 +1,26 @@
+aside {
+  position: sticky;
+  top: 0;
+}
+
+app-sidebar-nav {
+  display: block;
+  width: 100%;
+  height: calc(100svh - 4rem);
+  position: fixed;
+  opacity: 0;
+
+  translate: -100%;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.open {
+  translate: initial;
+  opacity: 1;
+}
+
 @media (min-width: 480px) {
   :host {
     display: flex;
@@ -6,8 +29,21 @@
     height: 100svh;
   }
 
+  aside {
+    min-width: 15rem;
+  }
+
   main {
     flex-grow: 1;
     overflow: auto;
+  }
+
+  app-sidebar-nav {
+    width: auto;
+    height: calc(100svh - 5rem);
+    position: static;
+    opacity: 1;
+    translate: initial;
+    transition-property: none;
   }
 }
