@@ -1,6 +1,7 @@
 <aside>
-  <app-sidenav></app-sidenav>
+  <app-sidebar-header [(state)]="state" />
+  <app-sidebar-nav [ngClass]="{'open': isOpen()}"></app-sidebar-nav>
 </aside>
 <main>
-  <router-outlet></router-outlet>
+  <router-outlet />
 </main>

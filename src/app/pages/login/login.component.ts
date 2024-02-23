@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { stravaAuthorizeUrl } from 'src/app/core/utils/strava';
+import { Component, OnInit } from '@angular/core'
+import { ActivatedRoute, Router } from '@angular/router'
+import { stravaAuthorizeUrl } from 'src/app/utils/strava'
 
 @Component({
   selector: 'app-login',
@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   }
 
   public get stravaUrl() {
-    return stravaAuthorizeUrl();
+    return stravaAuthorizeUrl()
   }
 
   public clearQuerParams() {

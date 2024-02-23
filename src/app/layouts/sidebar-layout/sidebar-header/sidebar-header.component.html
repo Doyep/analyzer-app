@@ -1,0 +1,7 @@
+<header class="flex-center mobile-reverse">
+  <app-burger-menu class="desktop-hidden" [(state)]="state" />
+  <h1 class="white text-ellipsis">{{ title() }}</h1>
+  <a routerLink="/profile">
+    <img class="avatar" [src]="user()?.profileUrl" alt="avatar" />
+  </a>
+</header>

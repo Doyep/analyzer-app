@@ -1,0 +1,86 @@
+nav {
+  background-color: white;
+  height: inherit;
+}
+
+ul {
+  padding: 3rem 3.5rem;
+
+  &>*:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+.border-bottom-mobile {
+  border-bottom: 1px solid;
+}
+
+.link {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: .75rem;
+  padding: .5rem;
+  color: var(--text-color, black);
+
+  & app-svg-icon {
+    color: var(--icon-color, blue);
+  }
+
+  &.active {
+    background-color: var(----gray-100, lightgray);
+    border: 1px solid;
+    border-radius: 0.375rem;
+    cursor: default;
+  }
+}
+
+.link:not(.active) {
+  --text-color: var(--gray-200, gray);
+  --icon-color: black;
+}
+
+.link:not(.active):hover {
+  --text-color: var(--secondary, blue);
+  --icon-color: var(--strava, orange);
+}
+
+.link.active {
+  --text-color: black;
+  --icon-color: var(--secondary, blue);
+}
+
+@media (min-width: 480px) {
+  nav {
+    background-color: var(--primary, blue);
+  }
+
+  ul {
+    padding: 1rem;
+
+    &>*:not(:last-child) {
+      margin-bottom: .5rem;
+    }
+  }
+
+  .text-xl-mobile {
+    font-size: initial;
+    line-height: initial;
+  }
+
+  .border-bottom-mobile {
+    border-bottom: none;
+  }
+
+  .link {
+    padding: .25rem;
+  }
+
+  .link:not(.active) {
+    --icon-color: var(--gray-100, lightgray);
+  }
+
+  .link:not(.active):hover {
+    --text-color: white;
+  }
+}
