@@ -8,7 +8,7 @@ import { fromEvent, map, startWith } from 'rxjs'
 export class ScreenService {
   isMobile = toSignal(fromEvent(window, 'resize').pipe(
     startWith(window),
-    map(() => window.innerWidth < 480)), {
-    initialValue: window.innerWidth < 480
+    map(() => window.innerWidth < 640)), {
+    initialValue: window.innerWidth < 640
   })
 }
