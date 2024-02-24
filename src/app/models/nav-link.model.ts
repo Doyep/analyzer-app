@@ -1,4 +1,4 @@
-import { SvgType } from "../shared/components/svg-icon/svg-icon.component"
+import { SvgType } from "../components/svg-icon/svg-icon.component"
 
 export type NavLink = {
   icon: SvgType,

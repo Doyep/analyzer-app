@@ -22,7 +22,7 @@ h1 {
   padding: var(--_padding);
 }
 
-@media (min-width: 480px) {
+@media (min-width: 640px) {
   :host {
     --padding: 1rem;
     --font-size: initial;

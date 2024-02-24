@@ -6,6 +6,7 @@ export type SvgType = 'admin' | 'dashboard' | 'graph' | 'list' | 'exit' | 'runne
   selector: 'app-svg-icon',
   standalone: true,
   templateUrl: './svg-icon.component.html',
+  styleUrl: './svg-icon.component.scss',
 })
 export class SvgIconComponent {
   @Input({required: true})

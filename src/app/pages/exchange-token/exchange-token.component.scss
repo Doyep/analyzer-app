@@ -5,8 +5,8 @@
   --duration-step: 0.1s;
 
   display: flex;
-  min-height: 100vh;
-  min-height: 100svh;
+  min-height: calc(100vh - 5rem);
+  min-height: calc(100svh - 5rem);
   padding: 2.5rem;
   background: linear-gradient(to right, var(--secondary, blue), var(--primary, blue));
 }
