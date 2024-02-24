@@ -12,11 +12,9 @@ a[theme="button"] {
   text-align: center;
   color: var(--_text-color);
 
-  & > * {
+  &>* {
     grid-area: container;
-    height: 1rem;
-    align-items: center;
-    justify-content: flex-start;
+    height: 1.25rem;
   }
 
   &:hover {

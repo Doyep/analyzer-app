@@ -1,20 +1,16 @@
 :host {
   display: flex;
-  min-height: 100vh;
-  min-height: 100svh;
+  min-height: calc(100vh - 2rem);
+  min-height: calc(100svh - 2rem);
   padding: 1rem;
   background: white;
 }
 
 main {
-  width: 22rem;
+  width: 17.5rem;
   padding: 2.5rem;
   border-radius: 1rem;
   background-color: white;
-}
-
-.gap-1>*:not(:last-child) {
-  margin-bottom: 1rem;
 }
 
 hgroup {
@@ -28,10 +24,6 @@ h1::first-letter {
   color: var(--primary, blue);
   font-size: 3.75rem;
   line-height: 1;
-}
-
-.h-8 {
-  height: 8rem;
 }
 
 @media (min-width: 480px) {

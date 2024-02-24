@@ -1,1 +1,66 @@
+.mb-1 {
+  margin-bottom: 1rem;
+}
 
+.align-right {
+  text-align: right;
+}
+
+.red {
+  color: red;
+}
+
+.white {
+  color: white;
+}
+
+.primary {
+  color: var(--primary, blue);
+}
+
+.bg-primary {
+  background-color: var(--primary, blue);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+@media (min-width: 480px) {
+  .desktop-hidden {
+    display: none;
+  }
+}
+
+.block {
+  display: block;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.hide-empty:empty {
+  display: none;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.h-8 {
+  height: 8rem;
+}
+
+a {
+  text-decoration: none;
+}
