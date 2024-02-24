@@ -30,12 +30,6 @@
   margin: auto;
 }
 
-@media (min-width: 480px) {
-  .desktop-hidden {
-    display: none;
-  }
-}
-
 .block {
   display: block;
 }
@@ -63,4 +57,18 @@
 
 a {
   text-decoration: none;
+}
+
+.h-3 {
+  height: 3rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+@media (min-width: 480px) {
+  .desktop-hidden {
+    display: none;
+  }
 }

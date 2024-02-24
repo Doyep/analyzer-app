@@ -1,12 +1,20 @@
-aside {
-  position: sticky;
-  top: 0;
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100vh;
+  height: 100svh;
+}
+
+main {
+  flex-grow: 1;
+  overflow: auto;
 }
 
 app-sidebar-nav {
   display: block;
   width: 100%;
-  height: calc(100svh - 4rem);
+  height: calc(100svh - 5.25rem);
   position: fixed;
   opacity: 0;
 
@@ -23,24 +31,14 @@ app-sidebar-nav {
 
 @media (min-width: 480px) {
   :host {
-    display: flex;
-    align-items: stretch;
-    height: 100vh;
-    height: 100svh;
+    flex-direction: row;
   }
 
   aside {
     min-width: 15rem;
   }
 
-  main {
-    flex-grow: 1;
-    overflow: auto;
-  }
-
   app-sidebar-nav {
-    width: auto;
-    height: calc(100svh - 5rem);
     position: static;
     opacity: 1;
     translate: initial;
