@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core'
 import { Router, RouterModule } from '@angular/router'
+import { SvgIconComponent } from 'src/app/components/svg-icon/svg-icon.component'
 import { NAV_LINK } from 'src/app/models/nav-link.model'
 import { LogoutService } from 'src/app/services/logout.service'
-import { SvgIconComponent } from 'src/app/shared/components/svg-icon/svg-icon.component'
 
 @Component({
   selector: 'app-sidebar-nav',
